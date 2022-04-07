@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import useInput from "./custom-hooks/customHooks";
 import CounterCompo from "./redux/Counter";
+
 const Home = () => {
   const [checkString, setCheckString] = useState("");
 
@@ -22,10 +23,10 @@ const Home = () => {
       <button onClick={() => validationCheckHandler()}>check</button>
       {checkStringStatus && <p>validate String</p>}
       {!checkStringStatus && <p>Invalid String</p>}
-      <div>
+      <>
         React Redux Counter
         <CounterCompo />
-      </div>
+      </>
     </div>
   );
 };
